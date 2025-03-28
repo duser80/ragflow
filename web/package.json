@@ -2,13 +2,13 @@
   "private": true,
   "author": "bill",
   "scripts": {
-    "build": "umi build",
-    "dev": "cross-env UMI_DEV_SERVER_COMPRESS=none umi dev",
+    "build": "node init && umi build",
+    "dev": "node init && cross-env UMI_DEV_SERVER_COMPRESS=none umi dev",
     "postinstall": "umi setup",
     "lint": "umi lint --eslint-only",
     "prepare": "cd .. && husky web/.husky",
     "setup": "umi setup",
-    "start": "npm run dev",
+    "start": "node init && npm run dev",
     "test": "jest --no-cache --coverage"
   },
   "lint-staged": {
